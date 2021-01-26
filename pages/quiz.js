@@ -3,7 +3,6 @@ import db from '../db.json';
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import QuizBackground from '../src/components/QuizBackground'
-import QuizLogo from '../src/components/QuizLogo'
 import GitHubCorner from '../src/components/GitHubCorner'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -36,7 +35,7 @@ const linkStyle = {
   color: 'gray',
 };
 
-export default function Home() {
+export default function Quiz() {
   return  (
    <div>
      <Head>
@@ -54,7 +53,7 @@ export default function Home() {
               <Widget.Header>
                 <h1>Quiz Alura</h1>
               </Widget.Header>
-              <p>lorem ipsum blablabla..</p>
+              <p>Essa é a página do quiz</p>
             </Widget.Content>
           </Widget>
           <Widget>
