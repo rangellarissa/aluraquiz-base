@@ -1,24 +1,13 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import QuizBackground from '../src/components/QuizBackground'
-import QuizLogo from '../src/components/QuizLogo'
-import GitHubCorner from '../src/components/GitHubCorner'
-import Head from 'next/head'
-import Link from 'next/link'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-  text-align: left;
-`
-const BackgroundImage = styled.div`
-  background-image: url(${db.bg});
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-`;
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizLogo from '../src/components/QuizLogo';
+import GitHubCorner from '../src/components/GitHubCorner';
 
 export const QuizContainer = styled.div`
   width:100%;
@@ -31,47 +20,55 @@ export const QuizContainer = styled.div`
   }
 `;
 
-const linkStyle = {
-  textDecoration: 'none',
-  color: 'gray',
-};
-
 export default function Home() {
-  return  (
-   <div>
-     <Head>
-       <title>Quiz Alura</title>
+  const router = useRouter();
+  const [name, setName] = React.useState('');
 
-       <meta property="og:title" content="Quiz Alura" key="title" />
-       <meta property="og:image" content={db.bg}/>
-       <meta property="og:image:type" content="image/jpg"/>
-     </Head>
+  return (
+    <QuizBackground backgroundImage={db.bg}>
+    <Head>
+      <title>Quiz Alura - Base</title>
 
-      <QuizBackground backgroundImage={db.bg}>
-        <QuizContainer>
-          <Widget>
-            <Widget.Content>
-              <Widget.Header>
-                <h1>Quiz Alura</h1>
-              </Widget.Header>
-              <p>lorem ipsum blablabla..</p>
-            </Widget.Content>
-          </Widget>
-          <Widget>
-          <Widget.Content>
-              <Widget.Header>
-                <h1>The legend of zelda</h1>
-              </Widget.Header>
-              <p>lorem ipsum blablabla..</p>
-              <Link href="/quiz">
-                <a style={linkStyle}>Quiz page</a>
-              </Link>
-            </Widget.Content>
-          </Widget>
-          <Footer />
-        </QuizContainer>
-        <GitHubCorner projectUrl="http://github.com/rangellarissa"/>
-      </QuizBackground>
-    </div>
+      <meta property="og:title" content="Quiz Alura" key="title" />
+      <meta property="og:image" content={db.bg} />
+      <meta property="og:image:type" content="image/jpg" />
+    </Head>
+    <QuizContainer>
+      <QuizLogo />
+      <Widget>
+        <Widget.Header>
+          <h1>Quiz Alura</h1>
+        </Widget.Header>
+        <Widget.Content>
+          <form onSubmit={function (infosDoEvento) {
+            infosDoEvento.preventDefault();
+            router.push(`/quiz?name=${name}`);
+            console.log('Fazendo uma submissão por meio do react');
+            }}
+            >
+            <input
+              onChange={function (infosDoEvento) {
+                console.log(infosDoEvento.target.value);
+                setName(infosDoEvento.target.value);
+              }}
+              placeholder="Diz aí seu nome"
+              />
+            <button type="submit" disabled={name.length === 0}>
+              Jogar
+              {name}
+            </button>
+          </form>
+        </Widget.Content>
+      </Widget>
+      <Widget>
+        <Widget.Content>
+          <h1>Quizes da Galera</h1>
+          <p>Quiz 1</p>
+        </Widget.Content>
+        </Widget>
+        <Footer />
+      </QuizContainer>
+      <GitHubCorner projectUrl="http://github.com/rangellarissa" />
+    </QuizBackground>
   );
 }

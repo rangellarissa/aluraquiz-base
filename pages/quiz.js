@@ -1,17 +1,17 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import QuizBackground from '../src/components/QuizBackground'
-import GitHubCorner from '../src/components/GitHubCorner'
-import Head from 'next/head'
-import Link from 'next/link'
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import QuizBackground from '../src/components/QuizBackground';
+import GitHubCorner from '../src/components/GitHubCorner';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.primary};
   text-align: left;
-`
+`;
 const BackgroundImage = styled.div`
   background-image: url(${db.bg});
   flex: 1;
@@ -57,16 +57,17 @@ export default function Quiz() {
             </Widget.Content>
           </Widget>
           <Widget>
-          <Widget.Content>
-              <Widget.Header>
-                <h1>The legend of zelda</h1>
-              </Widget.Header>
-              <p>lorem ipsum blablabla..</p>
-              <Link href="/quiz">
-                <a style={linkStyle}>Quiz page</a>
-              </Link>
+            <Widget.Content>
+
             </Widget.Content>
+            <Widget.Header>
+                <h1>The legend of zelda</h1>
+            </Widget.Header>
+              <p>lorem ipsum blablabla..</p>
           </Widget>
+            <Link href="/quiz">
+                <a style={linkStyle}>Quiz page</a>
+            </Link>
           <Footer />
         </QuizContainer>
         <GitHubCorner projectUrl="http://github.com/rangellarissa"/>
