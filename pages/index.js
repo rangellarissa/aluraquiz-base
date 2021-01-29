@@ -19,9 +19,9 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Quiz Alura - Base</title>
+        <title>Quiz Alura - Arquitetura</title>
 
-        <meta property="og:title" content="Quiz Alura" key="title" />
+        <meta property="og:title" content="Quiz de Arquitetura Alura" key="title" />
         <meta property="og:image" content={db.bg} />
         <meta property="og:image:type" content="image/jpg" />
       </Head>
@@ -29,7 +29,7 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Quiz Alura</h1>
+            <h1>Quiz de Arquitetura Alura</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={function (infosDoEvento) {
@@ -52,7 +52,7 @@ export default function Home() {
         </Widget>
         <Widget>
           <Widget.Content>
-            <h1>Quizes da Galera</h1>
+            <h1>Outros Quizes</h1>
             <p>Quiz 1</p>
           </Widget.Content>
         </Widget>

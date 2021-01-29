@@ -1,30 +1,68 @@
 {
     "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "title": "Quiz Arquitetura da Alura",
+    "description": "Teste os seus conhecimentos sobre arquitetura!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://media.giphy.com/media/kiqsqNESfUOSQ/giphy.gif",
+        "title": "Como se chama a distância do piso de um cômodo até o teto?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Meio pé",
+          "Elevação",
+          "Pé direito",
+          "Altura"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://media.giphy.com/media/xu5b6xRwkOQ36/giphy.gif",
+        "title": "Qual a medida padrão do piso de cada degrau em uma escada?",
+        "description": "Essa eu quero ver",
+        "answer": 1,
+        "alternatives": [
+           "15cm - 16cm",
+           "17cm - 18cm",
+           "19cm - 20cm",
+           "20cm - 22cm"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/UzVAgtxx7DBra/giphy.gif",
+        "title": "Qual o nome da arquiteta que projetou o MASP - Museu de Arte de São Paulo?",
+        "description": "Será que você sabe?",
+        "answer": 1,
+        "alternatives": [
+           "Amanda Levete",
+           "Lina Bo Bardi",
+           "Sharon Egretta Sutton",
+           "Kazuyo Sejima"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/4rhu9gUgdt28w/giphy.gif",
+        "title": "Qual Arquiteto é o autor do Plano Piloto de Brasília?",
+        "description": "Essa é fácil!",
+        "answer": 3,
+        "alternatives": [
+           "Roberto Burle Marx",
+           "Oscar Niemeyer",
+           "Juscelino kubitschek",
+           "Lúcio Costa"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/6acgoukJFoGK4/giphy.gif",
+        "title": "Quais materiais constituem o concreto convencional?",
+        "description": "A hora da verdade!",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Areia, brita e cimento",
+           "Areia, brita, cimento e cal",
+           "Areia, brita, cimento e gesso",
+           "Areia, brita, cimento e pedras"
         ]
-      }
+      }      
     ],
     "external": [
       ""
