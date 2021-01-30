@@ -65,7 +65,9 @@
       }      
     ],
     "external": [
-      ""
+      "https://dark-quiz.azotief.dev/",
+      "https://mr-robot-quiz-alura.vercel.app/",
+      "https://aluraquiz-css.omariosouto.vercel.app/"
     ],
     "theme": {
       "colors": {
