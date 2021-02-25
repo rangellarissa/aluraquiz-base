@@ -3,10 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  right: 0;
   position: absolute;
   top: 0;
   border: 0;
-  right: 0;
   z-index: 20;
 `;
 

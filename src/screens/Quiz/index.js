@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Widget from '../../components/Widget';
+import GitHubCorner from '../../components/GitHubCorner';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
-import GitHubCorner from '../../components/GitHubCorner';
 
 
 function ResultWidget({ results }) {
@@ -198,6 +198,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
   return (
     <QuizBackground backgroundImage={bg}>
+      <GitHubCorner projectUrl="http://github.com/rangellarissa" />
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.QUIZ && (
@@ -214,7 +215,6 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
-      <GitHubCorner projectUrl="http://github.com/rangellarissa" />
     </QuizBackground>
   );
 }
