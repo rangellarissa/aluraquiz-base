@@ -20,6 +20,7 @@ export default function Home() {
 
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <GitHubCorner projectUrl="http://github.com/rangellarissa" />
       <Head>
         <title>Quiz Alura - Arquitetura</title>
 
@@ -106,7 +107,6 @@ export default function Home() {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="http://github.com/rangellarissa" />
     </QuizBackground>
   );
 }
